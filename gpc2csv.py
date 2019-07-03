@@ -5,6 +5,10 @@ import os
 import sys
 import csv
 from datetime import datetime
+import locale
+
+# set czech locale for float number formating
+locale.setlocale(locale.LC_ALL, 'cs_CZ.UTF-8')
 
 GPC_TYPE_REPORT = '074'
 GPC_TYPE_ITEM   = '075'
@@ -49,6 +53,9 @@ class GPC_Reader:
             result['currency_code'] = line[117:122]
             result['due_date'] = datetime.strptime(line[122:128],'%d%m%y').strftime('%d.%m.%Y')
             if ((result['value_code']==1) or (result['value_code']==4)): result['value'] = -result['value']
+
+            # convert value to string            
+            result['value'] = locale.format("%.2f", result['value'])
         else:
             raise Exception('Invalid GPC record type (%s)' % (rec_type))
             
