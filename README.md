@@ -2,6 +2,9 @@
 
 Převodník výpisů bankovních transakcí (výpisů z účtu) ze standardizovaného bankovního formátu ABO do formátu CSV (textový formát s čárkou oddělenými hodnotami). CSV formát může být následně otevřen tabulkovým procesorem (Microsoft Excel, LibreOffice Calc, ...) k dalším úpravám a analýze.
 
+A tool to convert bank account transaction list from ABO  format (a standardized textual format for exchange of account operations and transaction details originally developed by The Czech National Bank) to CSV format (comma-separated values file). CSV format can be then used to in a spreadsheet processor (Microsoft Excel, LibreOffice Calc, ...) for further processing and analysis of the data. Since ABO format is used exclusively within the Czech banking market, the rest of the description is in Czech.
+
+
 ## Co je ABO formát
 
 ABO formát (ABO = automatické bankovní operace) byl vytvořen Českou národní bankou pro standardizovanou výměnu informací o bankovních operacích. Formát popisuje jak aktivní operace (zadávání příkazů k úhradě), tak opearace pasivní (výpisy pohybů na účtu). 
