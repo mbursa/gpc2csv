@@ -55,7 +55,7 @@ class GPC_Reader:
             if ((result['value_code']==1) or (result['value_code']==4)): result['value'] = -result['value']
 
             # convert value to string            
-            result['value'] = locale.format("%.2f", result['value'])
+            result['value'] = locale.format_string("%.2f", result['value'])
         else:
             raise Exception('Invalid GPC record type (%s)' % (rec_type))
             
